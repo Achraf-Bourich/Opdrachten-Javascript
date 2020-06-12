@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dobbelsteen2.html</title>
+</head>
+
+<body>
+    <h1> opdracht 26 - dubbelsteen1.hrtml</h1>
+    <button onclick="gooi()">gooi</button>
+   <p id="uitvoer"></p>
+    <script>
+        function gooi() {
+            var worp = Math.floor(Math.random("uitvoer") * 6 + 1);
+            
+            switch (worp) {
+                case 1:
+                    document.getElementById("uitvoer").innerHTML = 
+                    "<img src='dobbelsteen1.png'/>";  
+                    break;
+                case 2:
+                document.getElementById("uitvoer").innerHTML = 
+                    "<img src='dobbelsteen.png'/>";  
+                    break;
+                case 3:
+                document.getElementById("uitvoer").innerHTML = 
+                    "<img src='dobbelsteen3.png'/>";  
+                    break;
+                case 4:
+                document.getElementById("uitvoer").innerHTML = 
+                    "<img src='dubbelsteen4.png'/>";  
+                    break;
+                case 5:
+                document.getElementById("uitvoer").innerHTML = 
+                    "<img src='dobbelsteen5.png'/>";  
+                    break;
+                case 6:
+                document.getElementById("uitvoer").innerHTML = 
+                    "<img src='dobbelsteen6.png'/>";  
+                    break;
+                default:
+                    //niet nodig je worp is altijd 1t/m 6
+
+            }
+        }
+    </script>
+</body>
+
+</html>

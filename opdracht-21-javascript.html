@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>achii</title>
+</head>
+
+<body>
+    <p><input type="text" id="artikelen" placeholder="Aantal artikelen?"></p>
+    <p><input type="text" id="prijs" placeholder="Prijs per stuk?"></p>
+
+    <button onclick="bereken()">OK</button>
+    <p id="voeten"></p>
+    <script>
+        function bereken() {
+            // invoer -------
+            var aantal = document.getElementById("artikelen").value;
+            var prijs = document.getElementById("prijs").value;
+            
+            var totaalprijs = aantal * prijs
+            var inclusief_btw = totaalprijs * 1.21
+            
+            // uitvoer -------
+            document.getElementById("voeten").innerHTML =
+                "<p> Het aantal is : " + aantal + " en de prijs per stuk is: " + prijs + " totaalprijs zonder btw: " +
+                totaalprijs + " inclusief btw is het: " + inclusief_btw + " </p>";
+        }
+    </script>
+</body>
+
+</html>

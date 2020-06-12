@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>opdracht 22</title>
+</head>
+
+<body>
+    <input type="text" id="lengte" value="lengte">
+    <input type="text" id="breedte" value="breedte">
+
+    <!-- muur -->
+    <p id="muur"> berekening muur</p>
+    <p id="muurprijs">muurprijs</p>
+    <button onclick="f()">muur</button>
+    <!-- plafond-->
+    <p id="plafond">plafondberekening</p>
+    <p id="plafondprijs">plafondprijs</p>
+    <button onclick="z()">plafond</button>
+    <!-- vloer -->
+    <p id="vloer"> berekening vloer</p>
+    <p id="vloerprijs">vloerprijs</p>
+    <button onclick="g()">vloer</button>
+
+
+
+    <script>
+        //functie voor muur
+        function f() {
+            
+            var muurlengte = document.getElementById("lengte").value;
+            var muurbreedte = document.getElementById("breedte").value;
+
+            var muurberekening = muurbreedte * muurlengte;
+            var muurprijs = muurberekening * 25;
+
+            document.getElementById("muur").innerHTML = "muurberekening: " + muurberekening;
+            document.getElementById("muurprijs").innerHTML = "muurprijs: " + muurprijs;
+
+        }
+        //functie voor plafond
+        function z() {
+
+            var plafondlengte = document.getElementById("lengte").value;
+            var plafondbreedte = document.getElementById("breedte").value;
+
+            var plafondberekening = plafondbreedte * plafondlengte;
+            var plafondprijs = plafondberekening * 40;
+
+            document.getElementById("plafond").innerHTML = "plafondberekening: " + plafondberekening;
+            document.getElementById("plafondprijs").innerHTML = "plafondprijs: " + plafondprijs;
+
+        }
+        //functie voor vloer
+        function g() {
+
+            var vloerlengte = document.getElementById("lengte").value;
+            var vloerbreedte = document.getElementById("breedte").value;
+
+            var vloerberekening = vloerbreedte * vloerlengte;
+            var vloerprijs = vloerberekening * 30;
+
+            document.getElementById("vloer").innerHTML = "vloerberekening: " + vloerberekening;
+            document.getElementById("vloerprijs").innerHTML = "vloerprijs: " + vloerprijs;
+
+        }
+    </script>
+
+</body>
+
+</html>
